@@ -26,7 +26,7 @@ By default it is a `master` branch.
 
 === show graph of commits and branches
 
-`git log --all -decorate --oneline --graph`
+`git log --all --decorate --oneline --graph`
 
 === branch
 
@@ -82,6 +82,7 @@ In this case the master just moves to the (latest) commit of the branch.
 * Commit: 3 &lt;- (master &lt;- HEAD), branchA
 * Commit: 2
 * Commit: 4 &lt;- branchB
+
 Now we don't need `branchA` because it has been merged with master, and both point to same commit.
 
 Check which commits are already merged with branch we are on.
@@ -105,6 +106,7 @@ This results in a separate commit.
 * Commit: 2
 * Commit: 4
 * Commit: 5 &lt;- (master &lt;- HEAD), branchB
+
 When there is no conflict you just continue the merge.
 If there is conflict you need to resolve the conflict.
 
@@ -133,6 +135,7 @@ Or delete a line that `dev` inherited from base.
 * Commit: 4
 * Commit: 5 &lt;- dev
 * Commit: 6 &lt;- (master &lt;- HEAD)
+
 Now, `dev` is not in direct path of `master`.
 And the changes done to `master` are conflicting.
 That means Git can't automatically resolve it.

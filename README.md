@@ -19,7 +19,7 @@ HEAD normally points to a branch.
 By default it is a `master` branch.
 
 ### show graph of commits and branches
-`git log --all -decorate --oneline --graph`
+`git log --all --decorate --oneline --graph`
 
 ### branch
 * Commit: 1
@@ -71,6 +71,7 @@ In this case the master just moves to the (latest) commit of the branch.
 * Commit: 3 <- (master <- HEAD), branchA
 * Commit: 2
 * Commit: 4 <- branchB
+
 Now we don't need `branchA` because it has been merged with master, and both point to same commit.
 
 Check which commits are already merged with branch we are on.
@@ -93,6 +94,7 @@ This results in a separate commit.
 * Commit: 2
 * Commit: 4
 * Commit: 5 <- (master <- HEAD), branchB
+
 When there is no conflict you just continue the merge.
 If there is conflict you need to resolve the conflict.
 
@@ -109,6 +111,7 @@ Now you can delete `branchB`.
 * Commit: 2
 * Commit: 4
 * Commit: 5 <- (dev <- HEAD), master
+
 `git add; git commit`
 
 `git checkout master`
@@ -120,6 +123,7 @@ Or delete a line that `dev` inherited from base.
 * Commit: 4
 * Commit: 5 <- dev
 * Commit: 6 <- (master <- HEAD)
+
 Now, `dev` is not in direct path of `master`.
 And the changes done to `master` are conflicting.
 That means Git can't automatically resolve it.
