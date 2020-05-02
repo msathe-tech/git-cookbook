@@ -10,6 +10,7 @@ Every commit has a SHA1 hash.
 
 Add and commit files
 ```shell script
+git commit -a -m "update README"
 ```
 Check logs
 `git log`
